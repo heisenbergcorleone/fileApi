@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+
+</head>
+<body>
+
+
+<button id="test">Click Me!</button>
+<script>
+
+function assert(condition,msg) {
+    if(condition){
+        console.log(msg);
+    }
+};
+
+
+function Button(){
+this.clicked = false;
+
+this.click = function(){
+    
+    this.clicked = true;
+    
+assert(button.clicked, "The button has been clicked");
+};
+
+}
+var button = new Button();
+console.log(button.clicked);
+var elem = document.getElementById("test");
+elem.addEventListener("click", button.click.bind(button));
+</script>
+
+</body>
+</html>
