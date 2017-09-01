@@ -13,7 +13,7 @@
             
 
         xhr.onload = function () {
-            var data = this.responseText;
+            var data = JSON.parse(this.responseText);
             console.log(data);
         };
 
