@@ -5,7 +5,20 @@
     </head>
     <body>
         <div class="dropzone" id="dropzone">Drag and Drop a plugin here!</div>
-        <div><input type = "number"></div>    
+        <div><input type = "number" id = "number"></div>    
     <script src="firstFile.js"></script>
+    <script>
+
+        var num = document.getElementById("number")
+        function double (x) {
+            console.log(x*2)
+        }
+        num.addEventListener("keyup", function(e) {
+            if(e.keyCode == 13) {
+            double(num.value);
+            }
+        })
+        
+    </script>
     </body>
 </html>

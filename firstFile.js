@@ -2,6 +2,16 @@
                 
     var dropzone = document.getElementById("dropzone");
 
+    function addplugin (data) {
+        //console.log(data[0].file)
+        var body = document.getElementsByTagName("body")[0];
+        var script = document.createElement("script");
+        script.src = data[0].file;
+        body.appendChild(script);
+
+    };
+
+
     function upload (files) {
         var formData = new FormData(),
             xhr = new XMLHttpRequest(),
@@ -14,14 +24,13 @@
 
         xhr.onload = function () {
             var data = JSON.parse(this.responseText);
-            console.log(data);
+            addplugin(data);
+            //console.log(data);
         };
 
         xhr.open('post','upload.php');
         xhr.send(formData);
-
-        
-        console.log(xhr)
+        //console.log(xhr)
         
 
     };
