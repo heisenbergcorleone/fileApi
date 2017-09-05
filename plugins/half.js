@@ -1,9 +1,9 @@
 var num = document.getElementById("number")
-function triple (x) {
-    console.log(x*3)
+function half (x) {
+    console.log(x/2)
 }
 num.addEventListener("keyup", function(e) {
     if(e.keyCode == 13) {
-       triple(num.value);
+       half(num.value);
     }
 })
